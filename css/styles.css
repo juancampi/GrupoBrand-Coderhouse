@@ -278,7 +278,7 @@ section#IMG6{
 
 
 .parallax {
-    background: url(./img/edificio.png);
+    background: url(../img/edificio.png);
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
@@ -369,6 +369,24 @@ article {
     color: white;
     font-family: helvetica;
 }
+
+
+h5 {
+    color:#026C78;
+    text-align: center;
+    font-size: 30px;
+}
+
+P {
+    color:#026C78;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+
+
 
 @media screen and (max-width: 480px){
     header{
