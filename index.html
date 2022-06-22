@@ -6,6 +6,7 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="icon"  href="img/logo3.png" type="image/png" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet"  href="./css/styles.css" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,7 @@
 	</section> -->
 	
 
-	<div class="parallax"> 
+	<div class="parallax1"> 
 		<!-- <p class="textoImg">
 			"El diseño conlleva innovación,
 			la innovación potencia la marca,
@@ -53,7 +54,7 @@
 
 			Marty Neymeier - The Designful Company</p> -->
 	</div>
-	<h1 class="h1titles">Nosotros</h1>
+	<h1 id="h1titles" class="animate__animated animate__bounce">Nosotros</h1>
 	
 	<section  class="quienesSomos">
 		<section class="quienesSomosSection1">
@@ -77,7 +78,7 @@
 		</section>
 	</section>
 
-	<div class="card-group">
+	<div class="card-group" id="cardId">
 		<div class="card">
 		  <img class="card-img-top" src="./img/4.png" alt="Card image cap">
 		  <div class="card-body">
@@ -129,9 +130,9 @@
 		</div>
 	  </div>
 
-	<h1 class="h1titles">Que hacemos</h1>
+	  <h1 id="h1titles" class="animate__animated animate__bounce">¿Que hacemos?</h1>
 	<main id="grilla" >
-		<section id="IMG1" class="textWithBlurredBg" >
+		<section id="IMG1" class="textWithBlurredBg">
 			<img src="./img/1.png" alt="IMG1" width="100%">
 			<h2>Branding</h2>
 		</section>
@@ -242,7 +243,10 @@
 		<a class= "footerTexto" href="contacto.html">Contactanos</a>	
 	</footer> -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	  </script>
 </body>
 </html>
 

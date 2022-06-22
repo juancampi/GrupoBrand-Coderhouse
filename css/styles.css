@@ -14,6 +14,9 @@ html {
     overflow: hidden;
 }
 body {
+    background-image: url(../img/blob-scene-haikei\ \(1\).svg);
+    background-size: 100vw;
+    background-position: center;
     font-family: helvetica;
     font-size: 1.6em;
     color: white;
@@ -277,7 +280,31 @@ section#IMG6{
 /* PARALLAX */
 
 
-.parallax {
+.parallax1 {
+    background: url(../img/edificio.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax2 {
+    background: url(../img/quienes_somos.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax3 {
+    background: url(../img/b1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax4 {
+    background: url(../img/b4.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax5 {
     background: url(../img/edificio.png);
     background-size: cover;
     background-attachment: fixed;
@@ -311,7 +338,7 @@ footer .footer__img {
 }
 
 
-.h1titles {
+#h1titles {
     font-family: helvetica;
     font-size: 4em;
     color: #026C78;
@@ -383,12 +410,23 @@ P {
     font-size: 15px;
 }
 
+#cardId {
+    margin-left: 10%;
+    margin-right: 10%;
+    position: center;
+}
 
-
-
-
+#tableId {
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 @media screen and (max-width: 480px){
+    
+    body {
+        background-image: url(../img/blob-scene-haikei\ \(2\).svg);
+    }
+    
     header{
         display: flex;
         flex-direction: column;
@@ -455,6 +493,7 @@ P {
         width: 100vw;
         align-self: center;
     }
+    
 }
 
 
