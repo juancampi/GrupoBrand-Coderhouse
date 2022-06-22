@@ -341,7 +341,11 @@ footer .footer__img {
 #h1titles {
     font-family: helvetica;
     font-size: 4em;
-    color: #026C78;
+    /* color: #026C78; */
+    background: -webkit-linear-gradient(#03788e,#01a3a4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #03788e;
     text-align: center;
     padding: 5rem;
 
@@ -416,9 +420,34 @@ P {
     position: center;
 }
 
+#cardText {
+    font-size: 1.1em;
+    color: #0099a0;
+    font-family: helvetica;
+    padding: 3rem;
+    text-align: justify;
+}
+
+#cardTitle {
+    font-size: 2.1em;
+    color: #0099a0;
+    font-family: helvetica;
+    padding: 1rem;
+    text-align: center;
+}
+
+
 #tableId {
     margin-left: 10%;
     margin-right: 10%;
+}
+
+hr {
+    width: 80%;
+    color: #0099a0;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: center;
 }
 
 @media screen and (max-width: 480px){
