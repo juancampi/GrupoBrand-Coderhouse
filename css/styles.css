@@ -198,7 +198,6 @@ section#IMG6{
 }
 
 .quienesSomosSection1 {
-    /* box-sizing:border-box; */
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -326,7 +325,7 @@ section#IMG6{
     height: 100%;
 }
 .parallax5 {
-    background: url(../img/edificio.png);
+    background: url(../img/b5.png);
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
@@ -364,7 +363,8 @@ footer .footer__img {
     font-size: 4em;
     /* color: #026C78; */
     background: -webkit-linear-gradient(#03788e,#01a3a4);
-    -webkit-background-clip: text;
+    -webkit-background-clip:text;
+    background-clip: none;
     -webkit-text-fill-color: transparent;
     color: #03788e;
     text-align: center;
@@ -639,7 +639,7 @@ hr {
         background-repeat: no-repeat;
     }
     .parallax5 {
-        background: url(../img/edificio.png);
+        background: url(../img/b5.png);
         background-size: 100vw;
         height: 30%;
         align-items: center;
