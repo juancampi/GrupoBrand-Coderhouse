@@ -41,6 +41,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    position: relative;
     border-bottom: 4px solid #147283;
     padding: 0rem 0;
     color: white;
@@ -60,9 +61,12 @@ header .navigation {
 }
 
 
-/* header .header__logo {
+header .header__logo {
     flex-basis: 40%;
-} */
+}
+
+
+
 
 header .header__img {
     width: 70%;
@@ -71,6 +75,8 @@ header .header__img {
     border-radius: 100%;
     margin-top: 0.7rem;
     margin-bottom: 0.7rem;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 header .header__img:hover {
@@ -80,6 +86,21 @@ header .header__img:hover {
     transition: 0.3s;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
+
+.hamburger {
+    display: none;
+}
+
+#hamburger {
+    display: none;
+    position: absolute;
+    bottom: 75px;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+
 
 .menu .menu__link {
     font-size: 1,8em;
@@ -106,7 +127,7 @@ header .header__img:hover {
     margin: 0 auto;
 } */
 
-  
+
   /* This changes all the animations globally */
 .textoImg{
     font-family: helvetica;
@@ -124,7 +145,7 @@ header .header__img:hover {
 
 #grilla {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
         "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
         "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
@@ -242,20 +263,20 @@ section#IMG6{
     transition:.3s;
     margin:4px;
   }
-  
+
   .textWithBlurredBg img{
     transition:.3s;
 
   }
-  
+
   .textWithBlurredBg:hover img{
     filter:blur(2px) brightness(60%);
 
   }
-   
+
   .textWithBlurredBg :not(img){
     position:absolute;
-    z-index:1; 
+    z-index:1;
     top:30%;
     width:100%;
     text-align:center;
@@ -264,11 +285,11 @@ section#IMG6{
     opacity:0;
     transition:.3s;
   }
-  
+
   .textWithBlurredBg h2{
     top:50%
   }
-  
+
   .textWithBlurredBg:hover :not(img){
     opacity:1;
   }
@@ -450,11 +471,11 @@ hr {
 }
 
 @media screen and (max-width: 480px){
-    
+
     body {
         background-image: url(../img/blob-scene-haikei\ \(2\).svg);
     }
-    
+
     header{
         display: flex;
         flex-direction: column;
@@ -467,11 +488,39 @@ hr {
         background: linear-gradient(to right, #03788e, #01a3a4);
         width: 100vw;
     }
+ 
+    .hamburger {
+        display: block;
+    }
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: 95px;
+        width: 32px;
+        height: 32px;
+        opacity: 0;
+    }
     
+    #hamburger:checked ~ .navigation {
+        display: block;
+    }
+
+    #hamburger:checked ~ nav .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    
+    header .navigation {
+        display: none;
+    }
+
     #grilla {
         display: flex;
         flex-direction: column;
-        /* grid-template-areas: 
+        /* grid-template-areas:
             "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
             "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
             "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
@@ -483,14 +532,14 @@ hr {
         margin-right: auto;
         margin-top: 1.5rem;
     }
-    header nav .menu {
-        display: flex;
+    /* header nav .menu {
+        display: none;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap:2.2rem;
-    }
-    
+    } */
+
     .quienesSomos{
         display: flex;
         /* flex-wrap:nowrap; */
@@ -507,9 +556,9 @@ hr {
         border: #026C78;
         border-radius: 15px;
         box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
-    
+
     }
-    
+
     .quienesSomosSection1 {
         /* box-sizing:border-box; */
         display: flex;
@@ -520,14 +569,15 @@ hr {
         width: 90vw;
         padding: 0rem;
     }
-    
+
 
     .quienesSomos .quienesSomos__img{
+        display: none;
         width: 90vw;
         padding: 2rem;
         border-radius: 15px;
     }
-    
+
     .quienesSomos .quienesSomos__title{
         font-size: 3em;
         color: white;
@@ -536,8 +586,9 @@ hr {
         text-align: center;
         border-radius: 5px;
         width: 80%;
+        margin-top: 2rem;
     }
-    
+
     .quienesSomos .quienesSomos__text{
         font-size: 1.1em;
         width: 80%;
@@ -546,7 +597,7 @@ hr {
         padding: 0rem;
         text-align: justify;
     }
-    
+
     .quienesSomos .quienesSomos__button{
         text-decoration: none;
         font-size: 1em;
@@ -556,9 +607,6 @@ hr {
         font-family: helvetica;
         padding: 0.5rem;
         align-self: center;
-        /* position: center; */
-        /* margin-left: 40%;
-        margin-right: 40%; */
     }
 
     .parallax1 {
