@@ -208,6 +208,7 @@ section#IMG6{
 
 
 .quienesSomos .quienesSomos__img{
+    display: block;
     width: 40vw;
     padding: 2rem;
     border-radius: 15px;
@@ -331,31 +332,6 @@ section#IMG6{
     height: 100%;
 }
 
-/*FOOTER*/
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 4px solid #147283;
-    color: white;
-    font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4);
-}
-
-footer nav .menu {
-    display: flex;
-    gap:2.2rem;
-}
-
-footer .footerText {
-    display: flex;
-    justify-content: center;
-    color: white;
-}
-
-footer .footer__img {
-    max-width: 50px;
-}
 
 
 #h1titles {
@@ -392,13 +368,13 @@ a {
     font-family: helvetica;
 }
 
-table, th, td {
+/* table, th, td {
     width: 33%;
     border: 2px solid;
     color: #0099a0;
     font-family: helvetica;
     text-align: center;
-}
+} */
 
 #fotoEdificio {
     width: 100%;
@@ -410,17 +386,47 @@ article {
     font-family: helvetica;
 }
 
-/* footer {
+
+/*FOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     color: white;
     font-family: helvetica;
     background: linear-gradient(to right, #03788e, #01a3a4);
-} */
+}
 
 .footerTexto {
     color: white;
     font-family: helvetica;
 }
+footer nav .menu {
+    display: flex;
+    gap:2.2rem;
+}
 
+footer .footerText {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+footer .footer__img {
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mediaIcon {
+    width: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* OTROS */
 
 h5 {
     color:#026C78;
@@ -604,6 +610,9 @@ hr {
         color: white;
         background-color: #0099a0;
         border-radius: 5px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
         font-family: helvetica;
         padding: 0.5rem;
         align-self: center;
@@ -645,4 +654,15 @@ hr {
         align-items: center;
         background-repeat: no-repeat;
     }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: helvetica;
+        background: linear-gradient(to right, #03788e, #01a3a4);
+    }
+
 }
