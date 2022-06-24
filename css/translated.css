@@ -62,4 +62,34 @@ header {
     bottom: 75px;
     width: 32px;
     height: 32px;
-    opacity: 0; }
+    opacity: 0; 
+  }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-family: helvetica;
+  background: linear-gradient(to right, #03788e, #01a3a4); }
+  .footer nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  .footer .footerText {
+    display: flex;
+    justify-content: center;
+    color: white; }
+  .footer .footer__img {
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.footerTexto {
+  color: white;
+  font-family: helvetica; }
+
+.mediaIcon {
+  width: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
