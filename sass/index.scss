@@ -1,4 +1,13 @@
 // HEADER + NAVIGATION
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
 
 header {
     display: flex;
@@ -89,7 +98,8 @@ header {
         height: 32px;
         opacity: 0;
     }
-    
+
+
 }
 
 // FOOTER
@@ -130,4 +140,558 @@ header {
     width: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+
+// ----------------------------------
+
+html {
+    font-size: 62.5%;
+    /* margin:auto; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    // background-image: url(../img/blob-scene-haikei\ \(1\).svg);
+    background-size: 100vw;
+    background-position: center;
+    font-family: helvetica;
+    font-size: 1.6em;
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    /* transform-style: preserve-3d; */
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+/* MAIN */
+/* #mainGallery{
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+
+  /* This changes all the animations globally */
+.textoImg{
+    font-family: helvetica;
+    font-style: bold;
+    font-size: 4em;
+    color: white;
+    text-align: center;
+    padding-top: 25rem;
+    margin-left: 47%;
+    margin-right: 47%;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* GALERIA DE FOTOS */
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
+        "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
+        "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
+    grid-template-rows:repeat(12 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    gap: 1.5rem;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
+
+section#IMG1{
+    grid-area: IMG1;
+}
+section#IMG2{
+    grid-area: IMG2;
+}
+section#IMG3{
+    grid-area: IMG3;
+}
+section#IMG4{
+    grid-area: IMG4;
+}
+section#IMG5{
+    grid-area: IMG5;
+}
+section#IMG6{
+    grid-area: IMG6;
+}
+
+
+.quienesSomos{
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: white;
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 80vw;
+    border: #026C78;
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
+
+    
+    .quienesSomos__img{
+        display: block;
+        width: 40vw;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .quienesSomos__title{
+        font-size: 3em;
+        color: white;
+        font-family: helvetica;
+        background: linear-gradient(to right, #03788e, #01a3a4);
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .quienesSomos__text{
+        font-size: 1.1em;
+        color: #0099a0;
+        font-family: helvetica;
+        padding: 3rem;
+        text-align: justify;
+    }
+
+    .quienesSomos__button{
+        text-decoration: none;
+        font-size: 1.1em;
+        color: white;
+        background-color: #0099a0;
+        border-radius: 5px;
+        font-family: helvetica;
+        padding: 1rem;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    .quienesSomos__button:hover{
+        text-decoration: none;
+        font-size: 1.1em;
+        color: #0099a0;
+        background-color: white;
+        border:1px;
+        border-color: #0099a0;
+        border-radius: 5px;
+        font-family: helvetica;
+        padding: 1rem;
+        text-align: justify;
+    }
+
+
+}
+
+.quienesSomosSection1 {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    width: 40vw;
+    padding: 2rem;
+}
+
+
+/* BLUR + TEXTO SOBRE IMAGENES DE GALERIA */
+
+.textWithBlurredBg{
+    position:relative;
+    transition:.3s;
+    margin:4px;
+  }
+
+  .textWithBlurredBg img{
+    transition:.3s;
+
+  }
+
+  .textWithBlurredBg:hover img{
+    filter:blur(2px) brightness(60%);
+
+  }
+
+  .textWithBlurredBg :not(img){
+    position:absolute;
+    z-index:1;
+    top:30%;
+    width:100%;
+    text-align:center;
+    align-self: center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+  }
+
+  .textWithBlurredBg h2{
+    top:50%
+  }
+
+  .textWithBlurredBg:hover :not(img){
+    opacity:1;
+  }
+
+
+
+
+
+/* PARALLAX */
+
+
+.parallax1 {
+    background: url(../img/edificio.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax2 {
+    background: url(../img/quienes_somos.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax3 {
+    background: url(../img/b1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax4 {
+    background: url(../img/b4.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+.parallax5 {
+    background: url(../img/b5.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+
+
+#h1titles {
+    font-family: helvetica;
+    font-size: 4em;
+    /* color: #026C78; */
+    background: -webkit-linear-gradient(#03788e,#01a3a4);
+    -webkit-background-clip:text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    color: #03788e;
+    text-align: center;
+    padding: 5rem;
+}
+
+
+#imagen1 {
+    width: 30%;
+    border-radius: 20px;
+}
+
+#integrantes {
+    width: 40%;
+    border-radius: 10px;
+}
+
+p {
+    color: #0099a0;
+    font-family: helvetica;
+}
+
+a {
+    color: #0099a0;
+    font-family: helvetica;
+}
+
+/* table, th, td {
+    width: 33%;
+    border: 2px solid;
+    color: #0099a0;
+    font-family: helvetica;
+    text-align: center;
+} */
+
+#fotoEdificio {
+    width: 100%;
+    align-self: center;
+}
+
+article {
+    color: #0099a0;
+    font-family: helvetica;
+}
+
+/* OTROS */
+
+h5 {
+    color:#026C78;
+    text-align: center;
+    font-size: 30px;
+}
+
+P {
+    color:#026C78;
+    text-align: center;
+    font-size: 15px;
+}
+
+#cardId {
+    margin-left: 10%;
+    margin-right: 10%;
+    position: center;
+}
+
+#cardText {
+    font-size: 1.1em;
+    color: #0099a0;
+    font-family: helvetica;
+    padding: 3rem;
+    text-align: justify;
+}
+
+#cardTitle {
+    font-size: 2.1em;
+    color: #0099a0;
+    font-family: helvetica;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+#tableId {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+hr {
+    width: 80%;
+    color: #0099a0;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: center;
+}
+
+
+@media screen and (min-device-width: 480px) and (max-device-width: 850px){
+
+    // body {
+    //     background-image: url(../img/blob-scene-haikei\ \(2\).svg);
+    // }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 4px solid #147283;
+        padding: 0rem 0;
+        color: white;
+        font-family: helvetica;
+        background: linear-gradient(to right, #03788e, #01a3a4);
+        width: 100vw;
+    }
+ 
+    /* .hamburger {
+        display: block;
+    }
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: 95px;
+        width: 32px;
+        height: 32px;
+        opacity: 0;
+    } */
+    
+    #hamburger:checked ~ .navigation {
+        display: block;
+    }
+
+    #hamburger:checked ~ nav .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    
+    header .navigation {
+        display: block;
+        margin-top: 20px;
+    }
+
+    #h1titles {
+        font-family: helvetica;
+        font-size: 4em;
+        /* color: #026C78; */
+        background: -webkit-linear-gradient(#03788e,#01a3a4);
+        -webkit-background-clip:text;
+        background-clip: none;
+        -webkit-text-fill-color: transparent;
+        color: #03788e;
+        text-align: center;
+        padding: 0rem;
+    }
+
+    #grilla {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-areas:
+            "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
+            "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
+            "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
+        grid-template-rows:repeat(12 1fr);
+        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+        gap: 1.5rem;
+        max-width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+    }
+    /* header nav .menu {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:2.2rem;
+    } */
+
+    .quienesSomos{
+        display: flex;
+        /* flex-wrap:nowrap; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: white;
+        margin-left: auto ;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        width: 80vw;
+        border: #026C78;
+        border-radius: 15px;
+        box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
+
+    }
+
+    .quienesSomosSection1 {
+        /* box-sizing:border-box; */
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        width: 90vw;
+        padding: 0rem;
+    }
+
+
+    .quienesSomos .quienesSomos__img{
+        display: none;
+        width: 90vw;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .quienesSomos .quienesSomos__title{
+        font-size: 3em;
+        color: white;
+        font-family: helvetica;
+        background: linear-gradient(to right, #03788e, #01a3a4);
+        text-align: center;
+        border-radius: 5px;
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .quienesSomos .quienesSomos__text{
+        font-size: 1.1em;
+        width: 80%;
+        color: #0099a0;
+        font-family: helvetica;
+        padding: 0rem;
+        text-align: justify;
+    }
+
+    .quienesSomos .quienesSomos__button{
+        text-decoration: none;
+        font-size: 1em;
+        color: white;
+        background-color: #0099a0;
+        border-radius: 5px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-family: helvetica;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .parallax1 {
+        background: url(../img/edificio.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    .parallax2 {
+        background: url(../img/quienes_somos.jfif);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+
+    .parallax3 {
+        background: url(../img/b1.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    .parallax4 {
+        background: url(../img/b4.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    .parallax5 {
+        background: url(../img/b5.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: helvetica;
+        background: linear-gradient(to right, #03788e, #01a3a4);
+    }
+
 }
