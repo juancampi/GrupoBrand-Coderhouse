@@ -866,7 +866,7 @@ hr {
         align-items: center;
         justify-content: center;
         color: white;
-        font-family: helvetica;
+        font: %fonts;
         background: linear-gradient(to right, #03788e, #01a3a4);
     }
 

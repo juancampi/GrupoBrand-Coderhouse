@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-ul {
-  list-style-type: none; }
-
 header {
   display: flex;
   flex-direction: row;
@@ -125,6 +122,128 @@ body {
   overflow-y: scroll;
   overflow-x: hidden; }
 
+ul {
+  list-style-type: none; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  border-bottom: 4px solid #147283;
+  padding: 0rem 0;
+  color: white;
+  font-family: helvetica;
+  background: linear-gradient(to right, #03788e, #01a3a4); }
+  header nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  header .navigation {
+    display: flex;
+    justify-content: center;
+    /* flex-basis: 60%; */ }
+  header nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  header .menu__link {
+    font-size: 1,8em;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #147283 0.8;
+    border: 0px solid #01a3a4 0;
+    /* border-radius: 5px; */
+    padding: 1rem 1.2rem; }
+  header .menu__link:hover {
+    /* background-color:#fff ; */
+    color: #147283;
+    transition: 0.5s;
+    /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */ }
+  header .navigation {
+    display: flex;
+    justify-content: center;
+    /* flex-basis: 60%; */ }
+  header .header__logo {
+    flex-basis: 40%; }
+  header .header__img {
+    width: 70%;
+    max-width: 100px;
+    border: rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-left: 15%;
+    margin-right: 15%; }
+  header .header__img:hover {
+    opacity: 0.9;
+    max-width: 100px;
+    transform: scale(1.01, 1.01);
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  header .hamburger {
+    display: none; }
+  header #hamburger {
+    display: none;
+    position: absolute;
+    bottom: 75px;
+    width: 32px;
+    height: 32px;
+    opacity: 0; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-family: helvetica;
+  background: linear-gradient(to right, #03788e, #01a3a4); }
+  .footer nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  .footer .footerText {
+    display: flex;
+    justify-content: center;
+    color: #ffffff; }
+  .footer .footer__img {
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.footerTexto {
+  color: #ffffff;
+  font-family: helvetica; }
+
+.mediaIcon {
+  width: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+html {
+  font-size: 62.5%;
+  /* margin:auto; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  background-size: 100vw;
+  background-position: center;
+  font-family: helvetica;
+  font-size: 1.6em;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  /* transform-style: preserve-3d; */
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
 /* MAIN */
 /* #mainGallery{
     max-width: 1200px;
@@ -179,13 +298,13 @@ section#IMG6 {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background-color: white;
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
   margin-bottom: 3rem;
   width: 80vw;
-  border: #026C78;
+  border: #147283;
   border-radius: 15px;
   box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3); }
   .quienesSomos .quienesSomos__img {
@@ -195,14 +314,14 @@ section#IMG6 {
     border-radius: 15px; }
   .quienesSomos .quienesSomos__title {
     font-size: 3em;
-    color: white;
+    color: #ffffff;
     font-family: helvetica;
     background: linear-gradient(to right, #03788e, #01a3a4);
     border-radius: 5px;
     width: 100%; }
   .quienesSomos .quienesSomos__text {
     font-size: 1.1em;
-    color: #0099a0;
+    color: #01a3a4;
     font-family: helvetica;
     padding: 3rem;
     text-align: justify; }
@@ -210,7 +329,7 @@ section#IMG6 {
     text-decoration: none;
     font-size: 1.1em;
     color: white;
-    background-color: #0099a0;
+    background-color: #01a3a4;
     border-radius: 5px;
     font-family: helvetica;
     padding: 1rem;
@@ -219,10 +338,10 @@ section#IMG6 {
   .quienesSomos .quienesSomos__button:hover {
     text-decoration: none;
     font-size: 1.1em;
-    color: #0099a0;
-    background-color: white;
+    color: #01a3a4;
+    background-color: #ffffff;
     border: 1px;
-    border-color: #0099a0;
+    border-color: #01a3a4;
     border-radius: 5px;
     font-family: helvetica;
     padding: 1rem;
@@ -304,7 +423,7 @@ section#IMG6 {
   -webkit-background-clip: text;
   background-clip: none;
   -webkit-text-fill-color: transparent;
-  color: #03788e;
+  color: #147283;
   text-align: center;
   padding: 5rem; }
 
@@ -317,11 +436,11 @@ section#IMG6 {
   border-radius: 10px; }
 
 p {
-  color: #0099a0;
+  color: #147283;
   font-family: helvetica; }
 
 a {
-  color: #0099a0;
+  color: #147283;
   font-family: helvetica; }
 
 /* table, th, td {
@@ -336,17 +455,17 @@ a {
   align-self: center; }
 
 article {
-  color: #0099a0;
+  color: #01a3a4;
   font-family: helvetica; }
 
 /* OTROS */
 h5 {
-  color: #026C78;
+  color: #147283;
   text-align: center;
   font-size: 30px; }
 
 P {
-  color: #026C78;
+  color: #147283;
   text-align: center;
   font-size: 15px; }
 
@@ -357,14 +476,14 @@ P {
 
 #cardText {
   font-size: 1.1em;
-  color: #0099a0;
+  color: #01a3a4;
   font-family: helvetica;
   padding: 3rem;
   text-align: justify; }
 
 #cardTitle {
   font-size: 2.1em;
-  color: #0099a0;
+  color: #01a3a4;
   font-family: helvetica;
   padding: 1rem;
   text-align: center; }
@@ -375,7 +494,7 @@ P {
 
 hr {
   width: 80%;
-  color: #0099a0;
+  color: #01a3a4;
   margin-left: 10%;
   margin-right: 10%;
   position: center; }
@@ -388,7 +507,7 @@ hr {
     justify-content: center;
     border-bottom: 4px solid #147283;
     padding: 0rem 0;
-    color: white;
+    color: #ffffff;
     font-family: helvetica;
     background: linear-gradient(to right, #03788e, #01a3a4);
     width: 100vw; }
@@ -458,7 +577,7 @@ hr {
     margin-top: 2rem;
     margin-bottom: 3rem;
     width: 80vw;
-    border: #026C78;
+    border: #147283;
     border-radius: 15px;
     box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3); }
   .quienesSomosSection1 {
@@ -479,7 +598,7 @@ hr {
     font-size: 3em;
     color: white;
     font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4);
+    background: #147283;
     text-align: center;
     border-radius: 5px;
     width: 80%;
@@ -487,7 +606,7 @@ hr {
   .quienesSomos .quienesSomos__text {
     font-size: 1.1em;
     width: 80%;
-    color: #0099a0;
+    color: #01a3a4;
     font-family: helvetica;
     padding: 0rem;
     text-align: justify; }
@@ -495,7 +614,7 @@ hr {
     text-decoration: none;
     font-size: 1em;
     color: white;
-    background-color: #0099a0;
+    background-color: #01a3a4;
     border-radius: 5px;
     margin-left: 0;
     margin-right: 0;

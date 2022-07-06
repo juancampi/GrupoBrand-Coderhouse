@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+@import "misc/variables";
+@import "misc/mixins";
+@import "misc/normalize";
+
+
 ul {
     list-style-type: none;
 }
@@ -15,11 +20,11 @@ header {
     align-items: center;
     justify-content: space-around;
     position: relative;
-    border-bottom: 4px solid #147283;
+    border-bottom: 4px solid $color-principal;
     padding: 0rem 0;
     color: white;
     font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4);
+    background: $gradient;
 
     nav .menu {
         display: flex;
@@ -42,15 +47,15 @@ header {
             color: #fff;
             text-decoration: none;
             padding:10px 10px;
-            background-color: #03788e 0.8;
-            border:0px solid #0db9d8 0.0;
+            background-color: $color-principal 0.8;
+            border:0px solid $color-terciario 0.0;
             /* border-radius: 5px; */
             padding: 1rem 1.2rem;
         }
         
         .menu__link:hover {
             /* background-color:#fff ; */
-            color:#026C78;
+            color:$color-principal;
             transition: 0.5s;
             /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */
         }
@@ -111,7 +116,7 @@ header {
     justify-content: space-evenly;
     color: white;
     font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4);
+    background: $gradient;
 
     nav .menu {
         display: flex;
@@ -121,7 +126,7 @@ header {
     .footerText {
         display: flex;
         justify-content: center;
-        color: white;
+        color: $color-secundario;
     }
     
     .footer__img {
@@ -132,7 +137,7 @@ header {
 }
 
 .footerTexto {
-    color: white;
+    color: $color-secundario;
     font-family: helvetica;
 }
 
@@ -160,7 +165,7 @@ body {
     background-position: center;
     font-family: helvetica;
     font-size: 1.6em;
-    color: white;
+    color: $color-secundario;
     margin: 0;
     padding: 0;
     perspective: 1px;
@@ -237,13 +242,13 @@ section#IMG6{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background-color: white;
+    background-color: $color-secundario;
     margin-left: auto ;
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: 3rem;
     width: 80vw;
-    border: #026C78;
+    border: $color-principal;
     border-radius: 15px;
     box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
 
@@ -257,16 +262,16 @@ section#IMG6{
 
     .quienesSomos__title{
         font-size: 3em;
-        color: white;
+        color: $color-secundario;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $gradient;
         border-radius: 5px;
         width: 100%;
     }
 
     .quienesSomos__text{
         font-size: 1.1em;
-        color: #0099a0;
+        color: $color-terciario;
         font-family: helvetica;
         padding: 3rem;
         text-align: justify;
@@ -276,7 +281,7 @@ section#IMG6{
         text-decoration: none;
         font-size: 1.1em;
         color: white;
-        background-color: #0099a0;
+        background-color: $color-terciario;
         border-radius: 5px;
         font-family: helvetica;
         padding: 1rem;
@@ -287,10 +292,10 @@ section#IMG6{
     .quienesSomos__button:hover{
         text-decoration: none;
         font-size: 1.1em;
-        color: #0099a0;
-        background-color: white;
+        color: $color-terciario;
+        background-color: $color-secundario;
         border:1px;
-        border-color: #0099a0;
+        border-color: $color-terciario;
         border-radius: 5px;
         font-family: helvetica;
         padding: 1rem;
@@ -396,7 +401,7 @@ section#IMG6{
     -webkit-background-clip:text;
     background-clip: none;
     -webkit-text-fill-color: transparent;
-    color: #03788e;
+    color: $color-principal;
     text-align: center;
     padding: 5rem;
 }
@@ -413,12 +418,12 @@ section#IMG6{
 }
 
 p {
-    color: #0099a0;
+    color: $color-principal;
     font-family: helvetica;
 }
 
 a {
-    color: #0099a0;
+    color: $color-principal;
     font-family: helvetica;
 }
 
@@ -436,20 +441,20 @@ a {
 }
 
 article {
-    color: #0099a0;
+    color: $color-terciario;
     font-family: helvetica;
 }
 
 /* OTROS */
 
 h5 {
-    color:#026C78;
+    color:$color-principal;
     text-align: center;
     font-size: 30px;
 }
 
 P {
-    color:#026C78;
+    color:$color-principal;
     text-align: center;
     font-size: 15px;
 }
@@ -462,7 +467,7 @@ P {
 
 #cardText {
     font-size: 1.1em;
-    color: #0099a0;
+    color: $color-terciario;
     font-family: helvetica;
     padding: 3rem;
     text-align: justify;
@@ -470,7 +475,7 @@ P {
 
 #cardTitle {
     font-size: 2.1em;
-    color: #0099a0;
+    color: $color-terciario;
     font-family: helvetica;
     padding: 1rem;
     text-align: center;
@@ -484,7 +489,7 @@ P {
 
 hr {
     width: 80%;
-    color: #0099a0;
+    color: $color-terciario;
     margin-left: 10%;
     margin-right: 10%;
     position: center;
@@ -502,11 +507,11 @@ hr {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-bottom: 4px solid #147283;
+        border-bottom: 4px solid $color-principal;
         padding: 0rem 0;
-        color: white;
+        color: $color-secundario;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $gradient;
         width: 100vw;
     }
  
@@ -588,7 +593,7 @@ hr {
         margin-top: 2rem;
         margin-bottom: 3rem;
         width: 80vw;
-        border: #026C78;
+        border: $color-principal;
         border-radius: 15px;
         box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
 
@@ -617,7 +622,7 @@ hr {
         font-size: 3em;
         color: white;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $color-principal;
         text-align: center;
         border-radius: 5px;
         width: 80%;
@@ -627,7 +632,7 @@ hr {
     .quienesSomos .quienesSomos__text{
         font-size: 1.1em;
         width: 80%;
-        color: #0099a0;
+        color: $color-terciario;
         font-family: helvetica;
         padding: 0rem;
         text-align: justify;
@@ -637,7 +642,7 @@ hr {
         text-decoration: none;
         font-size: 1em;
         color: white;
-        background-color: #0099a0;
+        background-color: $color-terciario;
         border-radius: 5px;
         margin-left: 0;
         margin-right: 0;
@@ -691,7 +696,7 @@ hr {
         justify-content: center;
         color: white;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $gradient;
     }
 
 }
