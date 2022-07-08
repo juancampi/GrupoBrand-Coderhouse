@@ -177,6 +177,9 @@ section#IMG6{
     grid-area: IMG6;
 }
 
+.quienesSomos__h1 {
+    display: none;
+}
 
 .quienesSomos{
     display: flex;
@@ -866,7 +869,6 @@ hr {
         align-items: center;
         justify-content: center;
         color: white;
-        font: %fonts;
         background: linear-gradient(to right, #03788e, #01a3a4);
     }
 
