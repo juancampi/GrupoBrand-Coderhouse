@@ -609,3 +609,151 @@ hr {
   margin-left: 10%;
   margin-right: 10%;
   position: center; }
+
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #147283;
+    padding: 0rem 0;
+    color: white;
+    font-family: helvetica;
+    background: linear-gradient(to right, #03788e, #01a3a4);
+    width: 100vw; }
+  .hamburger {
+    display: block; }
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 95px;
+    width: 32px;
+    height: 32px;
+    opacity: 0; }
+  #hamburger:checked ~ .navigation {
+    display: block; }
+  #hamburger:checked ~ nav .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  header .navigation {
+    display: none; }
+  #grilla {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-areas:
+            "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
+            "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
+            "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
+        grid-template-rows:repeat(12 1fr);
+        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    gap: 1.5rem;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem; }
+  /* header nav .menu {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:2.2rem;
+    } */
+  .quienesSomos {
+    display: flex;
+    /* flex-wrap:nowrap; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 80vw;
+    border: #026C78;
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3); }
+  .quienesSomosSection1 {
+    /* box-sizing:border-box; */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    padding: 0rem; }
+  .quienesSomos .quienesSomos__img {
+    display: none;
+    width: 90vw;
+    padding: 2rem;
+    border-radius: 15px; }
+  .quienesSomos .quienesSomos__title {
+    font-size: 3em;
+    color: white;
+    font-family: helvetica;
+    background: linear-gradient(to right, #03788e, #01a3a4);
+    text-align: center;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 2rem; }
+  .quienesSomos .quienesSomos__text {
+    font-size: 1.1em;
+    width: 80%;
+    color: #0099a0;
+    font-family: helvetica;
+    padding: 0rem;
+    text-align: justify; }
+  .quienesSomos .quienesSomos__button {
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    background-color: #0099a0;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+    font-family: helvetica;
+    padding: 0.5rem;
+    align-self: center; }
+  .parallax1 {
+    background: url(../img/edificio.png);
+    background-size: 100vw;
+    height: 30%;
+    align-items: center;
+    background-repeat: no-repeat; }
+  .parallax2 {
+    background: url(../img/quienes_somos.jfif);
+    background-size: 100vw;
+    height: 30%;
+    align-items: center;
+    background-repeat: no-repeat; }
+  .parallax3 {
+    background: url(../img/b1.png);
+    background-size: 100vw;
+    height: 30%;
+    align-items: center;
+    background-repeat: no-repeat; }
+  .parallax4 {
+    background: url(../img/b4.png);
+    background-size: 100vw;
+    height: 30%;
+    align-items: center;
+    background-repeat: no-repeat; }
+  .parallax5 {
+    background: url(../img/b5.png);
+    background-size: 100vw;
+    height: 30%;
+    align-items: center;
+    background-repeat: no-repeat; }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: helvetica;
+    background: linear-gradient(to right, #03788e, #01a3a4); } }
