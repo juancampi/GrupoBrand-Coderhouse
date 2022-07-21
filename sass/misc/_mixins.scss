@@ -3,3 +3,36 @@
     height: $height;
 }
     
+
+
+@mixin footermv(){
+    @media screen and (min-device-width: 480px) and (max-device-width: 850px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: linear-gradient(to right, #03788e, #01a3a4);
+
+    }
+}
+
+// @mixin footer (flex ,row, center, space-evenly, white, helvetica, linear-gradient(to right, #03788e, #01a3a4)){
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     color: white;
+//     font-family: helvetica;
+//     background: linear-gradient(to right, #03788e, #01a3a4);
+// }
+
+// @mixin footer (flex ,row, center, space-evenly, white, helvetica, linear-gradient(to right, #03788e, #01a3a4)){
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-evenly;
+//     color: white;
+//     font-family: helvetica;
+//     background: linear-gradient(to right, #03788e, #01a3a4);
+// }

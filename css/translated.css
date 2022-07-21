@@ -151,13 +151,13 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 10px 10px;
-    background-color: #147283 0.8;
-    border: 0px solid #01a3a4 0;
+    background-color: #03788e 0.8;
+    border: 0px solid #0db9d8 0.0;
     /* border-radius: 5px; */
     padding: 1rem 1.2rem; }
   header .menu__link:hover {
     /* background-color:#fff ; */
-    color: #147283;
+    color: #026C78;
     transition: 0.5s;
     /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */ }
   header .navigation {
@@ -205,11 +205,122 @@ header {
   .footer .footerText {
     display: flex;
     justify-content: center;
+    color: white; }
+  .footer .footer__img {
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.footerTexto {
+  color: white;
+  font-family: helvetica; }
+
+.mediaIcon {
+  width: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+ul {
+  list-style-type: none; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  border-bottom: 4px solid #147283;
+  padding: 0rem 0;
+  color: white;
+  font-family: helvetica;
+  background: linear-gradient(to right, #03788e, #01a3a4); }
+  header nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  header .navigation {
+    display: flex;
+    justify-content: center;
+    /* flex-basis: 60%; */ }
+  header nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  header .menu__link {
+    font-size: 1,8em;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #147283 0.8;
+    border: 0px solid #01a3a4 0;
+    /* border-radius: 5px; */
+    padding: 1rem 1.2rem; }
+  header .menu__link:hover {
+    /* background-color:#fff ; */
+    color: #147283;
+    transition: 0.5s;
+    /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */ }
+  header .navigation {
+    display: flex;
+    justify-content: center;
+    /* flex-basis: 60%; */ }
+
+.header__logo {
+  flex-basis: 40%; }
+
+.header__img {
+  width: 70%;
+  max-width: 100px;
+  border: rgba(0, 0, 0, 0);
+  border-radius: 100%;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 15%;
+  margin-right: 15%; }
+
+.header__img:hover {
+  opacity: 0.9;
+  max-width: 100px;
+  transform: scale(1.01, 1.01);
+  transition: 0.3s;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
+
+.hamburger {
+  display: none; }
+
+#hamburger {
+  display: none;
+  position: absolute;
+  bottom: 75px;
+  width: 32px;
+  height: 32px;
+  opacity: 0; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-family: helvetica;
+  background: linear-gradient(to right, #03788e, #01a3a4); }
+  .footer nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  .footer .footerText {
+    display: flex;
+    justify-content: center;
     color: #ffffff; }
   .footer .footer__img {
     max-width: 50px;
     padding-top: 10px;
     padding-bottom: 10px; }
+  @media screen and (min-device-width: 480px) and (max-device-width: 850px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: linear-gradient(to right, #03788e, #01a3a4); } }
 
 .footerTexto {
   color: #ffffff;
@@ -498,165 +609,3 @@ hr {
   margin-left: 10%;
   margin-right: 10%;
   position: center; }
-
-@media screen and (min-device-width: 480px) and (max-device-width: 850px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 4px solid #147283;
-    padding: 0rem 0;
-    color: #ffffff;
-    font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4);
-    width: 100vw; }
-  /* .hamburger {
-        display: block;
-    }
-    #hamburger {
-        display: block;
-        position: absolute;
-        top: 95px;
-        width: 32px;
-        height: 32px;
-        opacity: 0;
-    } */
-  #hamburger:checked ~ .navigation {
-    display: block; }
-  #hamburger:checked ~ nav .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; }
-  header .navigation {
-    display: block;
-    margin-top: 20px; }
-  #h1titles {
-    font-family: helvetica;
-    font-size: 4em;
-    /* color: #026C78; */
-    background: -webkit-linear-gradient(#03788e, #01a3a4);
-    -webkit-background-clip: text;
-    background-clip: none;
-    -webkit-text-fill-color: transparent;
-    color: #03788e;
-    text-align: center;
-    padding: 0rem; }
-  #grilla {
-    display: flex;
-    flex-direction: column;
-    /* grid-template-areas:
-            "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
-            "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
-            "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
-        grid-template-rows:repeat(12 1fr);
-        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
-    gap: 1.5rem;
-    max-width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5rem; }
-  /* header nav .menu {
-        display: none;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap:2.2rem;
-    } */
-  .quienesSomos {
-    display: flex;
-    /* flex-wrap:nowrap; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    width: 80vw;
-    border: #147283;
-    border-radius: 15px;
-    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3); }
-  .quienesSomosSection1 {
-    /* box-sizing:border-box; */
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    padding: 0rem; }
-  .quienesSomos .quienesSomos__img {
-    display: none;
-    width: 90vw;
-    padding: 2rem;
-    border-radius: 15px; }
-  .quienesSomos .quienesSomos__title {
-    font-size: 3em;
-    color: white;
-    font-family: helvetica;
-    background: #147283;
-    text-align: center;
-    border-radius: 5px;
-    width: 80%;
-    margin-top: 2rem; }
-  .quienesSomos .quienesSomos__text {
-    font-size: 1.1em;
-    width: 80%;
-    color: #01a3a4;
-    font-family: helvetica;
-    padding: 0rem;
-    text-align: justify; }
-  .quienesSomos .quienesSomos__button {
-    text-decoration: none;
-    font-size: 1em;
-    color: white;
-    background-color: #01a3a4;
-    border-radius: 5px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 5px;
-    font-family: helvetica;
-    padding: 0.5rem;
-    align-self: center; }
-  .parallax1 {
-    background: url(../img/edificio.png);
-    background-size: 100vw;
-    height: 42%;
-    align-items: center;
-    background-repeat: no-repeat; }
-  .parallax2 {
-    background: url(../img/quienes_somos.jfif);
-    background-size: 100vw;
-    height: 42%;
-    align-items: center;
-    background-repeat: no-repeat; }
-  .parallax3 {
-    background: url(../img/b1.png);
-    background-size: 100vw;
-    height: 42%;
-    align-items: center;
-    background-repeat: no-repeat; }
-  .parallax4 {
-    background: url(../img/b4.png);
-    background-size: 100vw;
-    height: 42%;
-    align-items: center;
-    background-repeat: no-repeat; }
-  .parallax5 {
-    background: url(../img/b5.png);
-    background-size: 100vw;
-    height: 42%;
-    align-items: center;
-    background-repeat: no-repeat; }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4); } }
