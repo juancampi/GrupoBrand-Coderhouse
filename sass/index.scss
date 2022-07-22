@@ -409,28 +409,32 @@ article {
     color: $color-secundario;
     font-family: helvetica;
     background-color: $gradient;
+
+    @include footermv;
+
+    nav .menu {
+        display: flex;
+        gap:2.2rem;
+    }
+    
+    .footerText {
+        display: flex;
+        justify-content: center;
+        color: $color-secundario;
+    }
+    
+    .footer__img {
+        text-decoration: none;
+        max-width: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
 }
 
 .footerTexto {
     color: $color-secundario;
     font-family: helvetica;
-}
-footer nav .menu {
-    display: flex;
-    gap:2.2rem;
-}
-
-footer .footerText {
-    display: flex;
-    justify-content: center;
-    color: $color-secundario;
-}
-
-footer .footer__img {
-    text-decoration: none;
-    max-width: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .mediaIcon {
@@ -495,18 +499,22 @@ hr {
         background-image: none;   
     }
 
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 4px solid $color-principal;
-        padding: 0rem 0;
-        color: $color-secundario;
-        font-family: helvetica;
-        background: $gradient;
-        width: 100vw;
-    }
+     header{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         border-bottom: 4px solid $color-principal;
+         padding: 0rem 0;
+         color: $color-secundario;
+         font-family: helvetica;
+         background: $gradient;
+         width: 100vw;
+
+         .navigation {
+             display: none;
+         }
+     }
  
     .hamburger {
         display: block;
@@ -532,9 +540,6 @@ hr {
     }
     
     
-    header .navigation {
-        display: none;
-    }
 
     #grilla {
         display: flex;
@@ -668,15 +673,15 @@ hr {
         background-repeat: no-repeat;
     }
 
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color:$color-secundario;
-        font-family: helvetica;
-        background: $gradient;
-    }
+    // .footer {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+    //     color:$color-secundario;
+    //     font-family: helvetica;
+    //     background: $gradient;
+    // }
 
 }
 @media screen and (min-device-width: 480px) and (max-device-width: 1080px){
@@ -878,13 +883,12 @@ hr {
         background-repeat: no-repeat;
     }
 
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: $color-secundario;
-        background: $gradient;
-    }
-
+    // .footer {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+    //     color: $color-secundario;
+    //     background: $gradient;
+    // }
 }

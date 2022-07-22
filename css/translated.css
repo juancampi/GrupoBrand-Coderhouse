@@ -413,25 +413,38 @@ article {
   color: #ffffff;
   font-family: helvetica;
   background-color: linear-gradient(to right, #03788e, #01a3a4); }
+  @media screen and (max-device-width: 480px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: linear-gradient(to right, #03788e, #01a3a4); } }
+  @media screen and (min-device-width: 481px) and (max-device-width: 850px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: linear-gradient(to right, #03788e, #01a3a4); } }
+  .footer nav .menu {
+    display: flex;
+    gap: 2.2rem; }
+  .footer .footerText {
+    display: flex;
+    justify-content: center;
+    color: #ffffff; }
+  .footer .footer__img {
+    text-decoration: none;
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
 
 .footerTexto {
   color: #ffffff;
   font-family: helvetica; }
-
-footer nav .menu {
-  display: flex;
-  gap: 2.2rem; }
-
-footer .footerText {
-  display: flex;
-  justify-content: center;
-  color: #ffffff; }
-
-footer .footer__img {
-  text-decoration: none;
-  max-width: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
 
 .mediaIcon {
   width: 40px;
@@ -493,6 +506,8 @@ hr {
     font-family: helvetica;
     background: linear-gradient(to right, #03788e, #01a3a4);
     width: 100vw; }
+    header .navigation {
+      display: none; }
   .hamburger {
     display: block; }
   #hamburger {
@@ -509,8 +524,6 @@ hr {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
-  header .navigation {
-    display: none; }
   #grilla {
     display: flex;
     flex-direction: column;
@@ -619,15 +632,7 @@ hr {
     background-size: 100vw;
     height: 30%;
     align-items: center;
-    background-repeat: no-repeat; }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-family: helvetica;
-    background: linear-gradient(to right, #03788e, #01a3a4); } }
+    background-repeat: no-repeat; } }
 
 @media screen and (min-device-width: 480px) and (max-device-width: 1080px) {
   body {
@@ -786,11 +791,4 @@ hr {
     background-size: 100vw;
     height: 42%;
     align-items: center;
-    background-repeat: no-repeat; }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    background: linear-gradient(to right, #03788e, #01a3a4); } }
+    background-repeat: no-repeat; } }
