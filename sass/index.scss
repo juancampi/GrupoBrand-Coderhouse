@@ -1,10 +1,8 @@
-// HEADER + NAVIGATION
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 // MISC
 @import "./misc/variables";
@@ -12,25 +10,47 @@
 @import "./misc/normalize";
 
 
-// PARTIALS
-@import "./partials/header";
-@import "./partials/footer";
-
-
+html {
+    font-size: 62.5%;
+    /* margin:auto; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background-image: url("../img/blob-scene-haikei\ \(1\).svg");
+    background-size: 100vw;
+    background-position: center;
+    font-family: helvetica;
+    font-size: 1.6em;
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    /* transform-style: preserve-3d; */
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
 ul {
     list-style-type: none;
 }
+
+
 
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    position: relative;
+    position: sticky;
     border-bottom: 4px solid $color-principal;
     padding: 0rem 0;
-    color: white;
+    color: $color-secundario;
     font-family: helvetica;
     background: $gradient;
 
@@ -44,41 +64,14 @@ header {
         justify-content: center;
         /* flex-basis: 60%; */
     }
-
-    nav .menu {
-        display: flex;
-        gap:2.2rem;
-    }
-
-        .menu__link {
-            font-size: 1,8em;
-            color: #fff;
-            text-decoration: none;
-            padding:10px 10px;
-            background-color: $color-principal 0.8;
-            border:0px solid $color-terciario 0.0;
-            /* border-radius: 5px; */
-            padding: 1rem 1.2rem;
-        }
-        
-        .menu__link:hover {
-            /* background-color:#fff ; */
-            color:$color-principal;
-            transition: 0.5s;
-            /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */
-        }
     
-    .navigation {
-        display: flex;
-        justify-content: center;
-        /* flex-basis: 60%; */
-        }
-    }
-
+    
     .header__logo {
         flex-basis: 40%;
     }
-     
+    
+    
+    
     
     .header__img {
         width: 70%;
@@ -98,92 +91,41 @@ header {
         transition: 0.3s;
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     }
-    
-    
-    .hamburger {
-        display: none;
-    }
-    
-    #hamburger {
-        display: none;
-        position: absolute;
-        bottom: 75px;
-        width: 32px;
-        height: 32px;
-        opacity: 0;
-    }
-
-
-// FOOTER
-
-.footer {
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
-    font-family: helvetica;
-    background: $gradient;
-
-    nav .menu {
-        display: flex;
-        gap:2.2rem;
-    }
-    
-    .footerText {
-        display: flex;
-        justify-content: center;
-        color: $color-secundario;
-    }
-    
-    .footer__img {
-        max-width: 50px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    @include footermv;
 }
 
-.footerTexto {
+
+
+
+.hamburger {
+    display: none;
+}
+
+#hamburger {
+    display: none;
+    position: absolute;
+    bottom: 75px;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+
+
+.menu .menu__link {
+    font-size: 1,8em;
     color: $color-secundario;
-    font-family: helvetica;
-}
+    text-decoration: none;
+    padding:10px 10px;
+    background-color: $color-principal 0.8;
+    border:0px solid $color-terciario 0.0;
+    /* border-radius: 5px; */
+    padding: 1rem 1.2rem;
 
-.mediaIcon {
-    width: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-}
-
-
-// ----------------------------------
-
-html {
-    font-size: 62.5%;
-    /* margin:auto; */
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-body {
-    // background-image: url(../img/blob-scene-haikei\ \(1\).svg);
-    background-size: 100vw;
-    background-position: center;
-    font-family: helvetica;
-    font-size: 1.6em;
-    color: $color-secundario;
-    margin: 0;
-    padding: 0;
-    perspective: 1px;
-    /* transform-style: preserve-3d; */
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    .menu__link:hover {
+        /* background-color:#fff ; */
+        color: $color-principal;
+        transition: 0.5s;
+        /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */
+    }
 }
 
 
@@ -200,7 +142,7 @@ body {
     font-family: helvetica;
     font-style: bold;
     font-size: 4em;
-    color: white;
+    color: $color-secundario;
     text-align: center;
     padding-top: 25rem;
     margin-left: 47%;
@@ -223,7 +165,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5rem;
-
 }
 
 section#IMG1{
@@ -245,6 +186,9 @@ section#IMG6{
     grid-area: IMG6;
 }
 
+.quienesSomos__h1 {
+    display: none;
+}
 
 .quienesSomos{
     display: flex;
@@ -263,57 +207,6 @@ section#IMG6{
     border-radius: 15px;
     box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
 
-    
-    .quienesSomos__img{
-        display: block;
-        width: 40vw;
-        padding: 2rem;
-        border-radius: 15px;
-    }
-
-    .quienesSomos__title{
-        font-size: 3em;
-        color: $color-secundario;
-        font-family: helvetica;
-        background: $gradient;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .quienesSomos__text{
-        font-size: 1.1em;
-        color: $color-terciario;
-        font-family: helvetica;
-        padding: 3rem;
-        text-align: justify;
-    }
-
-    .quienesSomos__button{
-        text-decoration: none;
-        font-size: 1.1em;
-        color: white;
-        background-color: $color-terciario;
-        border-radius: 5px;
-        font-family: helvetica;
-        padding: 1rem;
-        margin-left: 40%;
-        margin-right: 40%;
-    }
-
-    .quienesSomos__button:hover{
-        text-decoration: none;
-        font-size: 1.1em;
-        color: $color-terciario;
-        background-color: $color-secundario;
-        border:1px;
-        border-color: $color-terciario;
-        border-radius: 5px;
-        font-family: helvetica;
-        padding: 1rem;
-        text-align: justify;
-    }
-
-
 }
 
 .quienesSomosSection1 {
@@ -325,6 +218,55 @@ section#IMG6{
     padding: 2rem;
 }
 
+
+.quienesSomos .quienesSomos__img{
+    display: block;
+    width: 40vw;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.quienesSomos .quienesSomos__title{
+    font-size: 3em;
+    color: $color-secundario;
+    font-family: helvetica;
+    background: $gradient;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.quienesSomos .quienesSomos__text{
+    font-size: 1.1em;
+    color: $color-terciario;
+    font-family: helvetica;
+    padding: 3rem;
+    text-align: justify;
+}
+
+.quienesSomos .quienesSomos__button{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: $color-secundario;
+    background-color: $color-terciario;
+    border-radius: 5px;
+    font-family: helvetica;
+    padding: 1rem;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.quienesSomos .quienesSomos__button:hover{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: $color-principal;
+    background-color: $color-secundario;
+    border:1px;
+    border-color: $color-terciario;
+    border-radius: 5px;
+    font-family: helvetica;
+    padding: 1rem;
+    text-align: justify;
+}
 
 /* BLUR + TEXTO SOBRE IMAGENES DE GALERIA */
 
@@ -351,7 +293,7 @@ section#IMG6{
     width:100%;
     text-align:center;
     align-self: center;
-    color:#fff;
+    color:$color-secundario;
     opacity:0;
     transition:.3s;
   }
@@ -452,8 +394,49 @@ a {
 }
 
 article {
-    color: $color-terciario;
+    color: $color-principal;
     font-family: helvetica;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $color-secundario;
+    font-family: helvetica;
+    background-color: $gradient;
+}
+
+.footerTexto {
+    color: $color-secundario;
+    font-family: helvetica;
+}
+footer nav .menu {
+    display: flex;
+    gap:2.2rem;
+}
+
+footer .footerText {
+    display: flex;
+    justify-content: center;
+    color: $color-secundario;
+}
+
+footer .footer__img {
+    text-decoration: none;
+    max-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mediaIcon {
+    width: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* OTROS */
@@ -478,7 +461,7 @@ P {
 
 #cardText {
     font-size: 1.1em;
-    color: $color-terciario;
+    color: $color-principal;
     font-family: helvetica;
     padding: 3rem;
     text-align: justify;
@@ -486,7 +469,7 @@ P {
 
 #cardTitle {
     font-size: 2.1em;
-    color: $color-terciario;
+    color: $color-principal;
     font-family: helvetica;
     padding: 1rem;
     text-align: center;
@@ -500,7 +483,7 @@ P {
 
 hr {
     width: 80%;
-    color: $color-terciario;
+    color: $color-principal;
     margin-left: 10%;
     margin-right: 10%;
     position: center;
@@ -508,20 +491,20 @@ hr {
 
 @media screen and (max-width: 480px){
 
-    // body {
-    //     background-image: url(../img/blob-scene-haikei\ \(2\).svg);
-    // }
+    body {
+        background-image: none;   
+    }
 
     header{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-bottom: 4px solid #147283;
+        border-bottom: 4px solid $color-principal;
         padding: 0rem 0;
-        color: white;
+        color: $color-secundario;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $gradient;
         width: 100vw;
     }
  
@@ -583,13 +566,13 @@ hr {
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        background-color: white;
+        background-color: $color-secundario;
         margin-left: auto ;
         margin-right: auto;
         margin-top: 2rem;
         margin-bottom: 3rem;
         width: 80vw;
-        border: #026C78;
+        border: $color-principal;
         border-radius: 15px;
         box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
 
@@ -616,9 +599,9 @@ hr {
 
     .quienesSomos .quienesSomos__title{
         font-size: 3em;
-        color: white;
+        color: $color-secundario;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $gradient;
         text-align: center;
         border-radius: 5px;
         width: 80%;
@@ -628,7 +611,7 @@ hr {
     .quienesSomos .quienesSomos__text{
         font-size: 1.1em;
         width: 80%;
-        color: #0099a0;
+        color: $color-principal;
         font-family: helvetica;
         padding: 0rem;
         text-align: justify;
@@ -638,7 +621,7 @@ hr {
         text-decoration: none;
         font-size: 1em;
         color: white;
-        background-color: #0099a0;
+        background-color: $color-terciario;
         border-radius: 5px;
         margin-left: 0;
         margin-right: 0;
@@ -690,9 +673,218 @@ hr {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: white;
+        color:$color-secundario;
         font-family: helvetica;
-        background: linear-gradient(to right, #03788e, #01a3a4);
+        background: $gradient;
+    }
+
+}
+@media screen and (min-device-width: 480px) and (max-device-width: 1080px){
+
+    body {
+        background-image: none;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 4px solid $color-principal;
+        padding: 0rem 0;
+        color: $color-secundario;
+        font-family: helvetica;
+        background: $gradient;
+        width: 100vw;
+
+        .navigation {
+            display: block;
+            margin-top: 20px;
+        }
+    
+    }
+ 
+    /* .hamburger {
+        display: block;
+    }
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: 95px;
+        width: 32px;
+        height: 32px;
+        opacity: 0;
+    } */
+    
+    #hamburger:checked ~ .navigation {
+        display: block;
+    }
+
+    #hamburger:checked ~ nav .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    
+    header .navigation {
+        display: block;
+        margin-top: 20px;
+    }
+
+    #h1titles {
+        font-family: helvetica;
+        font-size: 4em;
+        /* color: #026C78; */
+        background: -webkit-linear-gradient(#03788e,#01a3a4);
+        -webkit-background-clip:text;
+        background-clip: none;
+        -webkit-text-fill-color: transparent;
+        color: $color-principal;
+        text-align: center;
+        padding: 0rem;
+    }
+
+    #grilla {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-areas:
+            "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
+            "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
+            "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
+        grid-template-rows:repeat(12 1fr);
+        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+        gap: 1.5rem;
+        max-width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+    }
+    /* header nav .menu {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:2.2rem;
+    } */
+
+    .quienesSomos{
+        display: flex;
+        /* flex-wrap:nowrap; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: $color-secundario;
+        margin-left: auto ;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        width: 80vw;
+        border: $color-principal;
+        border-radius: 15px;
+        box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
+
+    }
+
+    .quienesSomosSection1 {
+        /* box-sizing:border-box; */
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        width: 90vw;
+        padding: 0rem;
+    }
+
+
+    .quienesSomos .quienesSomos__img{
+        display: none;
+        width: 90vw;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .quienesSomos .quienesSomos__title{
+        font-size: 3em;
+        color: $color-secundario;
+        font-family: helvetica;
+        background: $gradient;
+        text-align: center;
+        border-radius: 5px;
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .quienesSomos .quienesSomos__text{
+        font-size: 1.1em;
+        width: 80%;
+        color: #0099a0;
+        font-family: helvetica;
+        padding: 0rem;
+        text-align: justify;
+    }
+
+    .quienesSomos .quienesSomos__button{
+        text-decoration: none;
+        font-size: 1em;
+        color: $color-secundario;
+        background-color: $color-terciario;
+        border-radius: 5px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-family: helvetica;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .parallax1 {
+        background: url(../img/edificio.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    .parallax2 {
+        background: url(../img/quienes_somos.jfif);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+
+    .parallax3 {
+        background: url(../img/b1.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    .parallax4 {
+        background: url(../img/b4.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+    .parallax5 {
+        background: url(../img/b5.png);
+        background-size: 100vw;
+        height: 42%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $color-secundario;
+        background: $gradient;
     }
 
 }
