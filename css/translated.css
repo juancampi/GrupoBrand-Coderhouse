@@ -169,18 +169,19 @@ header {
 
 .menu .menu__link {
   font-size: 1,8em;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   padding: 10px 10px;
-  background-color: #147283 0.8;
-  border: 0px solid #01a3a4 0;
+  background-color: #03788e 0.8;
+  border: 0px solid #0db9d8 0.0;
   /* border-radius: 5px; */
   padding: 1rem 1.2rem; }
-  .menu .menu__link .menu__link:hover {
-    /* background-color:#fff ; */
-    color: #147283;
-    transition: 0.5s;
-    /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */ }
+
+.menu .menu__link:hover {
+  /* background-color:#fff ; */
+  color: #026C78;
+  transition: 0.5s;
+  /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */ }
 
 /* MAIN */
 /* #mainGallery{
@@ -202,7 +203,9 @@ header {
 /* GALERIA DE FOTOS */
 #grilla {
   display: grid;
-  grid-template-areas: "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2" "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5" "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
+  grid-template-areas: "IMG1 IMG1 IMG1 IMG2 IMG2 IMG2"
+ "IMG3 IMG3 IMG4 IMG4 IMG5 IMG5"
+ "IMG6 IMG6 IMG6 IMG6 IMG5 IMG5";
   grid-template-rows: repeat(12 1fr);
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
   gap: 1.5rem;
@@ -610,7 +613,7 @@ hr {
     align-items: center;
     background-repeat: no-repeat; }
   .parallax2 {
-    background: url(../img/quienes_somos.jfif);
+    background: url(../img/quienes_somos.png);
     background-size: 100vw;
     height: 30%;
     align-items: center;
@@ -769,7 +772,7 @@ hr {
     align-items: center;
     background-repeat: no-repeat; }
   .parallax2 {
-    background: url(../img/quienes_somos.jfif);
+    background: url(../img/quienes_somos.png);
     background-size: 100vw;
     height: 42%;
     align-items: center;

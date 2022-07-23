@@ -109,24 +109,24 @@ header {
     opacity: 0;
 }
 
-
 .menu .menu__link {
     font-size: 1,8em;
-    color: $color-secundario;
+    color: #fff;
     text-decoration: none;
     padding:10px 10px;
-    background-color: $color-principal 0.8;
-    border:0px solid $color-terciario 0.0;
+    background-color: #03788e 0.8;
+    border:0px solid #0db9d8 0.0;
     /* border-radius: 5px; */
     padding: 1rem 1.2rem;
-
-    .menu__link:hover {
-        /* background-color:#fff ; */
-        color: $color-principal;
-        transition: 0.5s;
-        /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */
-    }
 }
+
+.menu .menu__link:hover {
+    /* background-color:#fff ; */
+    color:#026C78;
+    transition: 0.5s;
+    /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */
+}
+
 
 
 
