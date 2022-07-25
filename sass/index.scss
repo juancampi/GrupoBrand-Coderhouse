@@ -127,7 +127,62 @@ header {
     /* box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); */
 }
 
+.iconText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 
+}
+
+.iconList {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iconList2 {
+    color: $color-terciario;
+    font-size: 3.5rem;
+    font-family: helvetica;
+    text-align: left;
+    margin-left: 10vw;
+    margin-right: auto;
+}
+
+.iconList3 {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .icon2 {
+    display: block;
+    align-items:center ;
+    width: 50vw;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .frase {
+    color: $color-terciario;
+    font-size: 2rem;
+    font-family: helvetica;
+    font-style: italic;
+    text-align: justify;
+    margin-left: 5vw;
+    margin-right: auto;
+}
 
 
 /* MAIN */
@@ -207,6 +262,66 @@ section#IMG6{
     border-radius: 15px;
     box-shadow: 2px 4px 4px 2px rgba(0.3, 0.3, 0.3, 0.3);
 
+    
+    .quienesSomos__img{
+        display: block;
+        width: 40vw;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .quienesSomos__title{
+        font-size: 3em;
+        color: $color-secundario;
+        text-align: center;
+        font-family: helvetica;
+        background: $gradient;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .quienesSomos__text{
+        font-size: 1.1em;
+        color: $color-terciario;
+        font-family: helvetica;
+        padding: 3rem;
+        text-align: justify;
+    }
+
+    .quienesSomos__text2 {
+        font-size: 1.1em;
+        color: $color-terciario;
+        font-family: helvetica;
+        text-align: left;
+        padding: 0.6rem;
+        margin-left: 0%;
+    }
+
+    .quienesSomos__button{
+        text-decoration: none;
+        font-size: 1.1em;
+        color: $color-secundario;
+        background-color: $color-terciario;
+        border-radius: 5px;
+        font-family: helvetica;
+        padding: 1rem;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    .quienesSomos__button:hover{
+        text-decoration: none;
+        font-size: 1.1em;
+        color: $color-principal;
+        background-color: $color-secundario;
+        border:1px;
+        border-color: $color-terciario;
+        border-radius: 5px;
+        font-family: helvetica;
+        padding: 1rem;
+        text-align: justify;
+    }
+
 }
 
 .quienesSomosSection1 {
@@ -219,31 +334,9 @@ section#IMG6{
 }
 
 
-.quienesSomos .quienesSomos__img{
-    display: block;
-    width: 40vw;
-    padding: 2rem;
-    border-radius: 15px;
-}
 
-.quienesSomos .quienesSomos__title{
-    font-size: 3em;
-    color: $color-secundario;
-    font-family: helvetica;
-    background: $gradient;
-    border-radius: 5px;
-    width: 100%;
-}
 
-.quienesSomos .quienesSomos__text{
-    font-size: 1.1em;
-    color: $color-terciario;
-    font-family: helvetica;
-    padding: 3rem;
-    text-align: justify;
-}
-
-.quienesSomos .quienesSomos__button{
+#btButton {
     text-decoration: none;
     font-size: 1.1em;
     color: $color-secundario;
@@ -255,7 +348,7 @@ section#IMG6{
     margin-right: 40%;
 }
 
-.quienesSomos .quienesSomos__button:hover{
+#btButton:hover{
     text-decoration: none;
     font-size: 1.1em;
     color: $color-principal;
@@ -267,6 +360,8 @@ section#IMG6{
     padding: 1rem;
     text-align: justify;
 }
+
+
 
 /* BLUR + TEXTO SOBRE IMAGENES DE GALERIA */
 
@@ -357,6 +452,7 @@ section#IMG6{
     color: $color-principal;
     text-align: center;
     padding: 5rem;
+    margin-top: 3rem;
 }
 
 
@@ -397,6 +493,26 @@ article {
     color: $color-principal;
     font-family: helvetica;
 }
+
+
+.tableTitle {
+    color: $color-terciario;
+    font-size: 3.5rem;
+    font-family: helvetica;
+    text-align: left;
+    margin-left: 10vw;
+    margin-right: auto;
+}
+
+.tableText {
+    color: $color-terciario;
+    font-size: 2.5rem;
+    font-family: helvetica;
+    text-align: left;
+    margin-left: 10vw;
+    margin-right: auto;
+}
+
 
 
 /*FOOTER*/
@@ -465,7 +581,7 @@ P {
 
 #cardText {
     font-size: 1.1em;
-    color: $color-principal;
+    color: $color-terciario;
     font-family: helvetica;
     padding: 3rem;
     text-align: justify;
@@ -473,7 +589,7 @@ P {
 
 #cardTitle {
     font-size: 2.1em;
-    color: $color-principal;
+    color: $color-terciario;
     font-family: helvetica;
     padding: 1rem;
     text-align: center;
@@ -539,7 +655,75 @@ hr {
         align-items: center;
     }
     
+    #h1titles {
+        font-family: helvetica;
+        font-size: 4em;
+        /* color: #026C78; */
+        background: -webkit-linear-gradient(#03788e,#01a3a4);
+        -webkit-background-clip:text;
+        background-clip: none;
+        -webkit-text-fill-color: transparent;
+        color: $color-principal;
+        text-align: center;
+        margin-top: 1vh;
+    }
+
+    .frase {
+        color: $color-terciario;
+        font-size: 2rem;
+        font-family: helvetica;
+        font-style: italic;
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7vh;
+    }
+
+
+    .iconText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
     
+    }
+    
+    .iconList {
+        display: none;
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .iconList2 {
+        color: $color-terciario;
+        font-size: 3.5rem;
+        font-family: helvetica;
+        text-align: left;
+        margin-left: 10vw;
+        margin-right: auto;
+    }
+    .iconList3 {
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #cardId {
+        width: 80vw;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: center;
+    }
+
+    .icon {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
     #grilla {
         display: flex;
@@ -748,7 +932,64 @@ hr {
         -webkit-text-fill-color: transparent;
         color: $color-principal;
         text-align: center;
-        padding: 0rem;
+        // margin-top: 4vh;
+    }
+
+
+    .frase {
+        color: $color-terciario;
+        font-size: 2.5rem;
+        font-family: helvetica;
+        font-style: italic;
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7vh;
+    }
+
+    .iconText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    
+    }
+    
+    .iconList {
+        display: none;
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .iconList2 {
+        color: $color-terciario;
+        font-size: 3.5rem;
+        font-family: helvetica;
+        text-align: left;
+        margin-left: 10vw;
+        margin-right: auto;
+    }
+    
+    .icon {
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .iconList3 {
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+      #cardId {
+        width: 80vw;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: center;
     }
 
     #grilla {
